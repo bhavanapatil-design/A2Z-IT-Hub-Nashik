@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2Z IT HUB - The Launchpad For Tomorrow's Tech Experts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="floating-social-icons">
+   <a 
+    href="https://wa.me/917796144920?text=Hello%20A2Z%20IT%20HUB,%20I'm%20interested%20in%20your%20courses.%20Can%20you%20please%20provide%20more%20details?" 
+    target="_blank" 
+    class="social-icon whatsapp-icon" 
+    aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+    <a href="https://www.instagram.com/a2zithub.nashik" target="_blank" class="social-icon instagram-icon" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+    <nav id="mainNavbar" class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="A2Z IT HUB Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Full-Stack-Web-Development.html">FULL STACK WEB</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Full-Stack-Java-Development.html">FULL STACK JAVA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Data-science-with-AI.html">DATA SCIENCE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Data-Analytics-With-AI.html">DATA ANALYTICS with AI</a></li>
+                </ul>
+                               <a href="#" class="btn btn-free-demo" data-bs-toggle="modal" data-bs-target="#demoModal">Free Demo</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="highlights-bar">
+        <div class="highlights-content">
+            <span><i class="fas fa-star"></i> 100% Job Guarantee</span>
+            <span><i class="fas fa-star"></i> Over 12,000 Freshers Placed</span>
+            <span><i class="fas fa-star"></i> Live Projects & On-Site Internship</span>
+            <span><i class="fas fa-star"></i> 13+ Years of Placement Excellence</span>
+            <span><i class="fas fa-star"></i> 100% Job Guarantee</span>
+            <span><i class="fas fa-star"></i> Over 12,000 Freshers Placed</span>
+            <span><i class="fas fa-star"></i> Live Projects & On-Site Internship</span>
+            <span><i class="fas fa-star"></i> 13+ Years of Placement Excellence</span>
+        </div>
+    </div>
+
+    <header class="hero-section">
+        <canvas id="particle-canvas"></canvas>
+        <div class="container">
+             <div class="row align-items-center hero-content">
+                <div class="col-lg-7">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="word">The</span>
+                            <span class="word">Launchpad</span>
+                            <span class="word">For</span>
+                            <span class="word">Tomorrow's</span><br>
+                            <span class="word highlight">Tech</span>
+                            <span class="word highlight">Experts</span>
+                        </h1>
+                        <div class="tags">
+                            <span>IT</span>
+                            <span>Non-IT</span>
+                            <span>Corporate</span>
+                            <span>Online & Classroom Training</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            <a href="#" class="btn btn-phone"><i class="fas fa-phone-alt"></i> 7796144920</a>
+                                                           <a href="#" class="btn btn-free-demo" data-bs-toggle="modal" data-bs-target="#demoModal">Free Demo</a>
+
+                        </div>
+                        <div class="ratings">
+                            <div class="rating-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+                                <span>4.9</span> ★★★★★
+                            </div>
+                             <div class="rating-item">
+                                <img src="images/justdial.png" alt="Justdial">
+                                <span>4.9</span> ★★★★★
+                            </div>
+                            <div class="rating-item">
+                                <img src="images/" alt="Sulekha">
+                                <span>4.9</span> ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                <form class="contact-form-glass">
+    <h3>Contact Us</h3>
+    <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Enter Your Name">
+    </div>
+    <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Enter Your E-mail...">
+    </div>
+    <div class="mb-3">
+        <input type="tel" class="form-control" placeholder="Enter Your Phone...">
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select">
+            <option selected>Select Course</option>
+            <option value="1">Full Stack Web Development</option>
+            <option value="2">Full Stack Java Development</option>
+            <option value="3">Frontend Development</option>
+            <option value="4">Data Science</option>
+            <option value="5">Software Testing</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select">
+            <option selected>Select your country</option>
+            <option value="1">India</option>
+        </select>
+    </div>
+    <div class="mb-3">
+         <select class="form-select">
+            <option selected>Choose Branch</option>
+            <option value="1">Nashik</option>
+            <option value="2">Ahmednagar</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-submit-form">Submit</button>
+</form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="about-summary-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 text-center">
+                <h2 class="section-title">A2Z IT HUB: Advanced Software IT Training Institute</h2>
+                <p class="section-text">
+                    A2Z IT HUB is where ambition meets opportunity. As one of the most trusted IT training institutes, we go beyond classroom teaching to deliver <strong>career-focused learning</strong> that prepares students for real-world success. Our specialized programs include Software Testing, Python Development, Java Full Stack, Data Science, and Cloud Computing, designed to match the latest industry demands.
+                </p>
+                <p class="section-text">
+                    With expert trainers, hands-on projects, and <strong>100% placement support</strong>, we ensure every learner is job-ready from day one. What makes A2Z IT HUB stand apart is our focus on innovative teaching and personalized career guidance, helping students build both technical expertise and confidence.
+                </p>
+                <a href="about-us.html" class="btn-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-hub-section section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2 class="section-title">
+                        A Leading IT Training Hub –
+                        <span>IT Education Centre</span>
+                    </h2>
+                    <h3>Excel Your Career With Top Upskilling Platform!</h3>
+                    <p>
+                        IT Education Centre has been trusted by over 100+ Academic and Employment partners. We aim to transform learners' basic desires into highly skilled professions. Our high-quality courses close the technology business skills gap for beginners and industry professionals.
+                    </p>
+                    <p class="tagline">Learning Made Accessible – Anytime, Everywhere!</p>
+                    <a href="#" class="btn btn-callback">Request Callback</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="animation-wrapper">
+                    <div class="center-logo">
+                        <img src="https://www.a2zithub.org/training/uploads/175221811688216835.png" alt="A2Z IT HUB Logo">
+                    </div>
+                    <div class="orbit-icon icon-1"><i class="fas fa-laptop-code"></i></div>
+                    <div class="orbit-icon icon-4"><i class="fab fa-react"></i></div>
+                    <div class="orbit-icon icon-2"><i class="fas fa-bullhorn"></i></div>
+                    <div class="orbit-icon icon-3"><i class="fas fa-database"></i></div>
+                    <div class="orbit-icon icon-4"><i class="fab fa-react"></i></div>
+                    <div class="orbit-icon icon-5"><i class="fab fa-java"></i></div>
+                    <div class="orbit-icon icon-2"><i class="fas fa-bullhorn"></i></div>
+                    <div class="orbit-icon icon-6"><i class="fas fa-user-graduate"></i></div>
+                    <div class="orbit-icon icon-7"><i class="fas fa-robot"></i></div> 
+                    <div class="orbit-icon icon-8"><i class="fas fa-chart-pie"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="stats-section section-padding">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-box">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h2 class="counter" data-target="6000">0+</h2>
+                    <p>Students Trained</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-box">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h2 class="counter" data-target="25">0+</h2>
+                    <p>Courses</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-box">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h2 class="counter" data-target="300">0+</h2>
+                    <p>Hiring Companies</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-box">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h2 class="counter" data-target="1300">0+</h2>
+                    <p>Placements</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hiring-section section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">200+ Hiring Organizations</h2>
+        </div>
+    </div>
+    
+    <div class="scroller-container">
+        <div class="logo-scroller" data-direction="left" data-speed="fast">
+            <div class="scroller-inner">
+                <div class="logo-item"><img src="images/accenture.jpeg" alt="Company 1"></div>
+                <div class="logo-item"><img src="images/amdocs.jpeg" alt="Company 2"></div>
+                <div class="logo-item"><img src="images/wipro.jpeg" alt="Company 1"></div>
+                <div class="logo-item"><img src="images/cognizant.png" alt="Company 2"></div>
+                <div class="logo-item"><img src="images/gamini.jpeg" alt="Company 1"></div>
+                <div class="logo-item"><img src="images/accenture.jpeg" alt="Company 2"></div>
+                </div>
+        </div>
+
+        <div class="logo-scroller" data-direction="right" data-speed="fast">
+            <div class="scroller-inner">
+                <div class="logo-item"><img src="images/accenture.jpeg" alt="Company 3"></div>
+                <div class="logo-item"><img src="images/HCLtech.jpeg" alt="Company 4"></div>
+                 <div class="logo-item"><img src="images/Tata.jpeg" alt="Company 3"></div>
+                <div class="logo-item"><img src="images/tcs.jpeg" alt="Company 4"></div>
+                <div class="logo-item"><img src="images/cognizant.png" alt="Company 3"></div>
+                <div class="logo-item"><img src="images/gamini.jpeg" alt="Company 4"></div>
+                </div>
+        </div>
+
+        <div class="logo-scroller" data-speed="fast">
+            <div class="scroller-inner">
+                <div class="logo-item"><img src="images/wipro.jpeg" alt="Company 5"></div>
+                <div class="logo-item"><img src="images/amdocs.jpeg" alt="Company 6"></div>
+                <div class="logo-item"><img src="images/accenture.jpeg" alt="Company 5"></div>
+                <div class="logo-item"><img src="images/cognizant.png" alt="Company 6"></div>
+                <div class="logo-item"><img src="images/amdocs.jpeg" alt="Company 5"></div>
+                <div class="logo-item"><img src="images/gamini.jpeg" alt="Company 6"></div>
+                </div>
+        </div>
+    </div>
+</section>
+<section class="success-stories-section">
+    <div class="container">
+        <h2 class="section-heading text-center">Building Future Professionals</h2>
+<p class="section-subheading text-center">
+    Our interns gain the practical, real-world skills needed to succeed. Here's a look at their journey.
+</p>
+        
+        <div class="swiper-container success-slider mt-5">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <div class="story-card">
+                        <div class="student-photo">
+                            <img src="images/PROFILE.png" alt="Priya Sharma">
+                        </div>
+                        <div class="story-content">
+                            <h4>Priya Sharma</h4>
+                            <span class="student-course">Full Stack Java Development</span>
+                            <blockquote>
+                                "A2Z IT Hub provided excellent training and live projects that helped me build confidence. The placement support was amazing!"
+                            </blockquote>
+                            <div class="placement-info">
+                                <span>Placed at</span>
+                                <img src="images/a2z.jpeg" alt="A2Z IT HUB" class="company-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="story-card">
+                        <div class="student-photo">
+                            <img src="images/P2.png" alt="Rahul Verma">
+                        </div>
+                        <div class="story-content">
+                            <h4>Rahul Verma</h4>
+                            <span class="student-course">Data Science Course</span>
+                            <blockquote>
+                                "The curriculum is perfectly designed for beginners. The trainers are experts and always ready to help. I got placed within a month of course completion."
+                            </blockquote>
+                            <div class="placement-info">
+                                <span>Placed at</span>
+                                <img src="images/a2z.jpeg" alt="A2Z IT HUB" class="company-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="story-card">
+                        <div class="student-photo">
+                            <img src="images/P2.png" alt="Rahul Verma">
+                        </div>
+                        <div class="story-content">
+                            <h4>Rahul Verma</h4>
+                            <span class="student-course">Data Science Course</span>
+                            <blockquote>
+                                "The curriculum is perfectly designed for beginners. The trainers are experts and always ready to help. I got placed within a month of course completion."
+                            </blockquote>
+                            <div class="placement-info">
+                                <span>Placed at</span>
+                                <img src="images/a2z.jpeg" alt="A2Z IT HUB" class="company-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="story-card">
+                        <div class="student-photo">
+                            <img src="images/P2.png" alt="Rahul Verma">
+                        </div>
+                        <div class="story-content">
+                            <h4>Rahul Verma</h4>
+                            <span class="student-course">Data Science Course</span>
+                            <blockquote>
+                                "The curriculum is perfectly designed for beginners. The trainers are experts and always ready to help. I got placed within a month of course completion."
+                            </blockquote>
+                            <div class="placement-info">
+                                <span>Placed at</span>
+                                <img src="images/a2z.jpeg" alt="A2Z IT HUB" class="company-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="story-card">
+                        <div class="student-photo">
+                            <img src="images/P2.png" alt="Rahul Verma">
+                        </div>
+                        <div class="story-content">
+                            <h4>Rahul Verma</h4>
+                            <span class="student-course">Data Science Course</span>
+                            <blockquote>
+                                "The curriculum is perfectly designed for beginners. The trainers are experts and always ready to help. I got placed within a month of course completion."
+                            </blockquote>
+                            <div class="placement-info">
+                                <span>Placed at</span>
+                                <img src="images/a2z.jpeg" alt="A2Z IT HUB" class="company-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="story-card">
+                        <div class="student-photo">
+                            <img src="images/P2.png" alt="Rahul Verma">
+                        </div>
+                        <div class="story-content">
+                            <h4>Rahul Verma</h4>
+                            <span class="student-course">Data Science Course</span>
+                            <blockquote>
+                                "The curriculum is perfectly designed for beginners. The trainers are experts and always ready to help. I got placed within a month of course completion."
+                            </blockquote>
+                            <div class="placement-info">
+                                <span>Placed at</span>
+                                <img src="images/a2z.jpeg" alt="A2Z IT HUB" class="company-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="story-card">
+                        <div class="student-photo">
+                            <img src="images/P1.png" alt="Anjali Patil">
+                        </div>
+                        <div class="story-content">
+                            <h4>Anjali Patil</h4>
+                            <span class="student-course">Full Stack Web Development</span>
+                            <blockquote>
+                                "The focus on practical skills and portfolio building is the best part. I'm grateful to the entire team for their guidance and support."
+                            </blockquote>
+                            <div class="placement-info">
+                                <span>Placed at</span>
+                                <img src="images/a2z.jpeg" alt="A2Z IT HUB" class="company-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+<section class="contact-demo-section section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5 col-md-12 text-center text-lg-start">
+               <div class="contact-text-wrapper">
+    <h2>Got More Questions?</h2>
+    <h3>Talk To Our Team Directly</h3>
+    <p>Contact us and our academic counsellor will get in touch with you shortly to help you make the right career choice. Let us guide you on the path to a successful future in the IT industry.</p>
+</div>
+            </div>
+
+            <div class="col-lg-2 col-md-12 text-center">
+                <div class="character-image-middle">
+                    <img src="images/customerGirl-DWfNIAN8.webp" alt="Academic Counsellor" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 text-center text-lg-end">
+                <div class="demo-lecture-wrapper">
+                    <h3>Watch <span>Demo</span> Lecture</h3>
+                    <div class="video-container" id="video-player">
+                        <img src="https://img.youtube.com/vi/Y92tI_7G1gU/maxresdefault.jpg" alt="Demo Lecture Thumbnail" class="img-fluid">
+                        <div class="play-button" data-video-id="Y92tI_7G1gU">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="certification-section py-5">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Certification To Career</h2>
+                <p class="lead">Let Us Guide Your Path To Success</p>
+            </div>
+
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="certification-content">
+                        <h4 class="certification-subtitle">Training Certification</h4>
+                        <h3>A2Z IT HUB Training Certificate</h3>
+                        <p>
+                            Once you have finished the training program at A2Z IT HUB, you will receive a globally recognized certification. These certificates validate your knowledge, job-ready skills, and practical experience, and make a valuable addition to your resume and LinkedIn profile.
+                        </p>
+                        <p>
+                            Plus, you can gain continuing education credits that confirm your ongoing commitment to developing your knowledge and professional skills, making you a top candidate for recruiters.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="certificate-image-wrapper">
+                        <img src="images/jscerti.png" alt="A2Z IT HUB Training Certificate">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="query-cta-section">
+    <div class="container">
+        <p>
+            <i class="fas fa-phone-alt"></i>
+            For Any Query, Feel Free to Call Us: 
+            <a href="tel:+917796144920">7796144920</a>
+        </p>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row gy-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget h-100">
+                    <img src="https://www.a2zithub.org/training/uploads/175221811688216835.png" alt="A2Z IT HUB Logo" class="footer-logo">
+                    <p class="about-text">
+                        A2Z IT HUB is a Group of IT Working Professionals based in A. Nagar & Nashik. We Believe in Sharing Best Practices and Real-World Knowledge with Learners to Help them Build a Successful Career in IT. 🚀
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/a2zithub.nashik"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-2 col-md-6">
+                <div class="footer-widget h-100">
+                    <h4 class="widget-title">Popular Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> HTML, CSS & JS</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> React.js</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Node.js & Express</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> MongoDB / MySQL</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> DevOps & AWS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+    <div class="footer-widget h-100">
+        <h4 class="widget-title">Company</h4>
+        <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i>About</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i>Contact Us</a></li>
+            <li><a href="certification.html"><i class="fas fa-chevron-right"></i>Certification</a></li>
+            <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i>Privacy Policy</a></li>
+            <li><a href="terms-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+        </ul>
+    </div>
+</div>
+
+            <div class="col-lg-2 col-md-6">
+                <div class="footer-widget h-100">
+                    <h4 class="widget-title">Internship</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Frontend Development</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Backend Development</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Full Stack Projects</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Capstone Project</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                 <div class="footer-widget h-100">
+                    <h4 class="widget-title">Branch Office (Nashik)</h4>
+                    <p class="contact-info">
+                        Near Prasad Circle, Gangapur Rd, Nashik-422013.   
+                    </p>
+                    <p>Email: info@a2zithub.org</p>
+                    <p>Phone: +91 7796144920  </p>
+                    <h4 class="widget-title mt-4">Head Office (A.Nagar)</h4>
+                    <p class="contact-info">
+                           Balikashram Rd, A. Nagar-414001.
+                    </p>
+                    <p>Email: info@a2zithub.org</p>
+                    <p>Phone: +91 9011144920</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright-text">&copy; All Rights Reserved. <strong>A2Z IT HUB</strong></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="counselor-text">
+                        Call our Counselors: <a href="tel:+917796144920">+91 7796144920</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- <a href="https://wa.me/919600998107" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i> How can I help you?
+</a> -->
+<div id="enquiryModal" class="enquiry-modal">
+    <div class="enquiry-modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-left-panel">
+            <h2>Get in touch to claim Best Available Discounts.</h2>
+            <img src="images/logo.png" alt="A2Z IT HUB Logo" class="modal-logo">
+        </div>
+        <div class="modal-right-panel">
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control" placeholder="Phone Number">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Course">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Location">
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        I'm not a robot
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-send">Send <i class="fas fa-arrow-circle-right"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content colorful-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="demoModalLabel"><i class="fas fa-desktop me-2"></i> Book Your Free Demo Class</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-center mb-3">Fill in your details and our team will contact you to schedule your free demo session.</p>
+                <form id="demo-whatsapp-form">
+                    <div class="input-group-custom mb-3">
+                        <i class="fas fa-user"></i>
+                        <input type="text" class="form-control" id="demo-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group-custom mb-3">
+                        <i class="fas fa-phone-alt"></i>
+                        <input type="tel" class="form-control" id="demo-contact" placeholder="Contact Number" required>
+                    </div>
+                    <button type="submit" class="btn-submit-colorful w-100">
+                        <i class="fab fa-whatsapp"></i> Request Demo on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="script.js"></script>
+       
+</body>
+</html>

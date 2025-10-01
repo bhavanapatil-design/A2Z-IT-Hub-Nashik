@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Devlopament</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="floating-social-icons">
+    <a 
+    href="https://wa.me/917796144920?text=Hello%20A2Z%20IT%20HUB,%20I'm%20interested%20in%20your%20courses.%20Can%20you%20please%20provide%20more%20details?" 
+    target="_blank" 
+    class="social-icon whatsapp-icon" 
+    aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+    <a href="https://www.instagram.com/a2z.akshay_nikam" target="_blank" class="social-icon instagram-icon" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+     <nav id="mainNavbar" class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="A2Z IT HUB Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Full-Stack-Web-Development.html">FULL STACK WEB</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Full-Stack-Java-Development.html">FULL STACK JAVA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Data-science-with-AI.html">DATA SCIENCE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Data-Analytics-With-AI.html">DATA ANALYTICS With AI</a></li>
+                </ul>
+                                <a href="#" class="btn btn-free-demo" data-bs-toggle="modal" data-bs-target="#demoModal">Free Demo</a>
+
+            </div>
+        </div>
+    </nav>
+<div class="scrolling-announcement-bar">
+    <div class="scrolling-content">
+        <span class="announcement-item"><i class="fas fa-bullhorn"></i> <strong>New Full Stack Web Batch</strong></span>
+        <span class="announcement-item"><i class="fas fa-calendar-alt"></i> Starts: 15th October</span>
+        <span class="announcement-item"><i class="fas fa-clock"></i> Time: 7:00 PM - 9:00 PM</span>
+        <span class="announcement-item"><i class="fas fa-chalkboard-teacher"></i> Mode: Online & Offline</span>
+       <a href="#enquiry-form" class="announcement-action">Limited Seats! Enquire Now</a>
+        
+        <span class="announcement-item"><i class="fas fa-bullhorn"></i> <strong>New Full Stack Web Batch</strong></span>
+        <span class="announcement-item"><i class="fas fa-calendar-alt"></i> Starts: 15th October</span>
+        <span class="announcement-item"><i class="fas fa-clock"></i> Time: 7:00 PM - 9:00 PM</span>
+        <span class="announcement-item"><i class="fas fa-chalkboard-teacher"></i> Mode: Online & Offline</span>
+       <a href="#enquiry-form" class="announcement-action">Limited Seats! Enquire Now</a>
+    </div>
+</div>
+
+  <section class="description-form-section">
+    <div class="container">
+        <div class="page-heading">
+            <h2>Full Stack Web Developer</h2>
+        </div>
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+                <div class="description-content">
+                    <h2 class="section-heading">Why Our Full Stack Course Is The Best Choice For Your Career</h2>
+                    <p>Our Full Stack Web Development course is meticulously designed to transform you from a beginner into a job-ready professional. We focus on a project-based learning approach, ensuring you gain the practical, hands-on skills that companies are looking for.</p>
+                    <p>You will learn to build complete, scalable web applications by mastering both front-end and back-end technologies under the guidance of industry experts.</p>
+                    
+                    <ul class="features-list mt-4">
+                        <li><i class="fas fa-check-circle"></i> Comprehensive curriculum covering the latest technologies.</li>
+                        <li><i class="fas fa-check-circle"></i> Hands-on training with real-world projects.</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated placement support and interview preparation.</li>
+                        <li><i class="fas fa-check-circle"></i> Learn from trainers with 10+ years of industry experience.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="form-wrapper">
+            <form id="whatsapp-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" id="contact" placeholder="Enter your mobile number" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="course" class="form-label">Select Course</label>
+                    <select class="form-select" id="course" required>
+                        <option value="" selected disabled>-- Choose a course --</option>
+                        <option value="Full Stack Web Development" selected>Full Stack Web Development</option>
+                        <option value="Full Stack Java Development">Full Stack Java Development</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Software Testing">Software Testing</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message / Description</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Any specific questions?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-brand-primary w-100">
+                    <i class="fab fa-whatsapp"></i> Send on WhatsApp
+                </button>
+            </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>  
+<section class="syllabus-section">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading">What You Will Learn</h2>
+            <p class="section-subheading">Our curriculum is designed to make you a complete job-ready Full Stack Developer.</p>
+        </div>
+
+        <div class="row g-5 mt-4">
+            <div class="col-lg-6">
+                <div class="syllabus-part">
+                    <h3 class="syllabus-title"><i class="fas fa-desktop"></i> Front-End Development</h3>
+                    <div class="syllabus-list">
+                        <div class="syllabus-item">
+                            <h4>HTML5 & CSS3</h4>
+                            <p>Build the structure and style of modern, responsive websites from scratch.</p>
+                        </div>
+                        <div class="syllabus-item">
+                            <h4>JavaScript (ES6+)</h4>
+                            <p>Master the core programming language of the web to create dynamic and interactive user experiences.</p>
+                        </div>
+                        <div class="syllabus-item">
+                            <h4>Bootstrap 5</h4>
+                            <p>Learn the world's most popular front-end framework for building responsive, mobile-first sites quickly.</p>
+                        </div>
+                        <div class="syllabus-item">
+                            <h4>React.js</h4>
+                            <p>Build powerful, fast, and scalable single-page applications (SPAs) with this popular JavaScript library.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="syllabus-part">
+                    <h3 class="syllabus-title"><i class="fas fa-server"></i> Back-End & Databases</h3>
+                    <div class="syllabus-list">
+                        <div class="syllabus-item">
+                            <h4>Node.js & Express.js</h4>
+                            <p>Create robust and scalable server-side applications and RESTful APIs using JavaScript.</p>
+                        </div>
+                        <div class="syllabus-item">
+                            <h4>MongoDB</h4>
+                            <p>Learn to work with a leading NoSQL database to store and manage your application's data efficiently.</p>
+                        </div>
+                        <div class="syllabus-item">
+                            <h4>Authentication & Security</h4>
+                            <p>Implement secure user login systems and protect your application from common threats.</p>
+                        </div>
+                        <div class="syllabus-item">
+                            <h4>Deployment & Git</h4>
+                            <p>Learn how to manage your code with Git/GitHub and deploy your full-stack applications to the cloud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="partners-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-heading">Our Hiring Partners</h2>
+            <p class="section-subheading">Our students are working at top companies across the industry.</p>
+        </div>
+         <div class="scroller-container">
+        <div class="logo-scroller" data-speed="fast">
+            <div class="scroller-inner">
+                <div class="logo-item"><img src="images/accenture.jpeg" alt="Company 1"></div>
+                <div class="logo-item"><img src="images/amdocs.jpeg" alt="Company 2"></div>
+                <div class="logo-item"><img src="images/wipro.jpeg" alt="Company 1"></div>
+                <div class="logo-item"><img src="images/cognizant.png" alt="Company 2"></div>
+                <div class="logo-item"><img src="images/gamini.jpeg" alt="Company 1"></div>
+                <div class="logo-item"><img src="images/accenture.jpeg" alt="Company 2"></div>
+                </div>
+        </div>
+        <div class="logo-scroller" data-direction="right" data-speed="fast">
+            <div class="scroller-inner">
+                <div class="logo-item"><img src="images/accenture.jpeg" alt="Company 3"></div>
+                <div class="logo-item"><img src="images/HCLtech.jpeg" alt="Company 4"></div>
+                 <div class="logo-item"><img src="images/Tata.jpeg" alt="Company 3"></div>
+                <div class="logo-item"><img src="images/tcs.jpeg" alt="Company 4"></div>
+                <div class="logo-item"><img src="images/cognizant.png" alt="Company 3"></div>
+                <div class="logo-item"><img src="images/gamini.jpeg" alt="Company 4"></div>
+                </div>
+        </div>
+        <div class="logo-scroller" data-speed="fast">
+            <div class="scroller-inner">
+                <div class="logo-item"><img src="images/wipro.jpeg" alt="Company 5"></div>
+                <div class="logo-item"><img src="images/amdocs.jpeg" alt="Company 6"></div>
+                <div class="logo-item"><img src="images/accenture.jpeg" alt="Company 5"></div>
+                <div class="logo-item"><img src="images/cognizant.png" alt="Company 6"></div>
+                <div class="logo-item"><img src="images/amdocs.jpeg" alt="Company 5"></div>
+                <div class="logo-item"><img src="images/gamini.jpeg" alt="Company 6"></div>
+                </div>
+        </div>
+</div>
+</section>
+<section class="student-reviews-section">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading">Hear Directly From Our Students</h2>
+            <p class="section-subheading">See what our students have to say about their learning experience.</p>
+
+            <button 
+                class="btn btn-brand-primary mt-3" 
+                data-bs-toggle="modal" 
+                data-bs-target="#contactModal">
+                <i class="fas fa-headset"></i> Contact Now
+            </button>
+            </div>
+
+        <div class="row g-4 mt-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="video-card">
+                    <div class="ratio ratio-4x3">
+                        <iframe src="C:\Users\Admin\Downloads\IMG_2236.MP4" title="Student Review 1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-details">
+                        <h4 class="student-name">Durgesh Mahajan</h4>
+                        <p class="course-name">Full Stack Java Development</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                 <div class="video-card">
+                    <div class="ratio ratio-4x3">
+                       <iframe src="C:\Users\Admin\Downloads\IMG_0807.MP4" title="Student Review 1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-details">
+                        <h4 class="student-name">Vaishnavi Khairnar</h4>
+                        <p class="course-name">Full Stack Web Development</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="video-card">
+                    <div class="ratio ratio-4x3">
+                        <iframe src="C:\Users\Admin\Downloads\IMG_1435.MP4" title="Student Review 1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-details">
+                        <h4 class="student-name">Pratik Gaikwad</h4>
+                        <p class="course-name">Full Stack Development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="certification-section section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Certification To Career</h2>
+            <p class="lead">Let Us Guide Your Path To Success</p>
+        </div>
+
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <div class="certification-content">
+                    <h4 class="certification-subtitle">Training Certification</h4>
+                    <h3>A2Z IT HUB Training Certificate</h3>
+                    <p>
+                        Once you have finished the training program at A2Z IT HUB, you will receive a globally recognized certification. These certificates validate your knowledge, job-ready skills, and practical experience, and make a valuable addition to your resume and LinkedIn profile.
+                    </p>
+                    <p>
+                        Plus, you can gain continuing education credits that confirm your ongoing commitment to developing your knowledge and professional skills, making you a top candidate for recruiters.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="certificate-image-wrapper">
+                    <img src="images/jscerti.png" alt="A2Z IT HUB Training Certificate">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="query-cta-section">
+    <div class="container">
+        <p>
+            <i class="fas fa-phone-alt"></i>
+            For Any Query, Feel Free to Call Us: 
+            <a href="tel:+917796144920">7796144920</a>
+        </p>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row gy-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget h-100">
+                    <img src="https://www.a2zithub.org/training/uploads/175221811688216835.png" alt="A2Z IT HUB Logo" class="footer-logo">
+                    <p class="about-text">
+                        A2Z IT HUB is a Group of IT Working Professionals based in A. Nagar & Nashik. We Believe in Sharing Best Practices and Real-World Knowledge with Learners to Help them Build a Successful Career in IT. 🚀
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/a2zithub.nashik"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-2 col-md-6">
+                <div class="footer-widget h-100">
+                    <h4 class="widget-title">Popular Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> HTML, CSS & JS</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> React.js</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Node.js & Express</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> MongoDB / MySQL</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> DevOps & AWS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <div class="footer-widget h-100">
+                    <h4 class="widget-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i>About</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Testimonials</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Placements</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <div class="footer-widget h-100">
+                    <h4 class="widget-title">Internship</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Frontend Development</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Backend Development</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Full Stack Projects</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Capstone Project</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                 <div class="footer-widget h-100">
+                    <h4 class="widget-title">Branch Office (Nashik)</h4>
+                    <p class="contact-info">
+                        Near Prasad Circle, Gangapur Rd, Nashik-422013.   
+                    </p>
+                    <p>Email: info@a2zithub.org</p>
+                    <p>Phone: +91 7796144920  </p>
+                    <h4 class="widget-title mt-4">Head Office (A.Nagar)</h4>
+                    <p class="contact-info">
+                           Balikashram Rd, A. Nagar-414001.
+                    </p>
+                    <p>Email: info@a2zithub.org</p>
+                    <p>Phone: +91 9011144920</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright-text">&copy; All Rights Reserved. <strong>A2Z IT HUB</strong></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="counselor-text">
+                        Call our Counselors: <a href="tel:+917796144920">+91 7796144920</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><footer class="site-footer">
+    <div class="container">
+        <div class="row gy-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget h-100">
+                    <img src="https://www.a2zithub.org/training/uploads/175221811688216835.png" alt="A2Z IT HUB Logo" class="footer-logo">
+                    <p class="about-text">
+                        A2Z IT HUB is a Group of IT Working Professionals based in A. Nagar & Nashik. We Believe in Sharing Best Practices and Real-World Knowledge with Learners to Help them Build a Successful Career in IT. 🚀
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/a2zithub.nashik"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-2 col-md-6">
+                <div class="footer-widget h-100">
+                    <h4 class="widget-title">Popular Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> HTML, CSS & JS</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> React.js</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Node.js & Express</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> MongoDB / MySQL</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> DevOps & AWS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+    <div class="footer-widget h-100">
+        <h4 class="widget-title">Company</h4>
+        <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i>About</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i>Contact Us</a></li>
+            <li><a href="certification.html"><i class="fas fa-chevron-right"></i>Certification</a></li>
+            <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i>Privacy Policy</a></li>
+            <li><a href="terms-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+        </ul>
+    </div>
+</div>
+
+            <div class="col-lg-2 col-md-6">
+                <div class="footer-widget h-100">
+                    <h4 class="widget-title">Internship</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Frontend Development</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Backend Development</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Full Stack Projects</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Capstone Project</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                 <div class="footer-widget h-100">
+                    <h4 class="widget-title">Branch Office (Nashik)</h4>
+                    <p class="contact-info">
+                        Near Prasad Circle, Gangapur Rd, Nashik-422013.   
+                    </p>
+                    <p>Email: info@a2zithub.org</p>
+                    <p>Phone: +91 7796144920  </p>
+                    <h4 class="widget-title mt-4">Head Office (A.Nagar)</h4>
+                    <p class="contact-info">
+                           Balikashram Rd, A. Nagar-414001.
+                    </p>
+                    <p>Email: info@a2zithub.org</p>
+                    <p>Phone: +91 9011144920</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright-text">&copy; All Rights Reserved. <strong>A2Z IT HUB</strong></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="counselor-text">
+                        Call our Counselors: <a href="tel:+917796144920">+91 7796144920</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content colorful-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel"><i class="fas fa-paper-plane me-2"></i>Let's Build Your Career</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="whatsapp-modal-form">
+                    <div class="input-group-custom mb-3">
+                        <i class="fas fa-user"></i>
+                        <input type="text" class="form-control" id="modal-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group-custom mb-3">
+                        <i class="fas fa-phone-alt"></i>
+                        <input type="tel" class="form-control" id="modal-contact" placeholder="Contact Number" required>
+                    </div>
+                    <div class="input-group-custom mb-3">
+                        <i class="fas fa-graduation-cap"></i>
+                        <select class="form-select" id="modal-course" required>
+                            <option value="" selected disabled>-- Select Your Course --</option>
+                            <option value="Full Stack Web Development">Full Stack Web Development</option>
+                            <option value="Full Stack Java Development">Full Stack Java Development</option>
+                        </select>
+                    </div>
+                    <div class="input-group-custom mb-4">
+                        <i class="fas fa-comment-dots"></i>
+                        <textarea class="form-control" id="modal-message" rows="3" placeholder="Your Message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit-colorful w-100">
+                        <i class="fab fa-whatsapp"></i> Send on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content colorful-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="demoModalLabel"><i class="fas fa-desktop me-2"></i> Book Your Free Demo Class</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-center mb-3">Fill in your details and our team will contact you to schedule your free demo session.</p>
+                <form id="demo-whatsapp-form">
+                    <div class="input-group-custom mb-3">
+                        <i class="fas fa-user"></i>
+                        <input type="text" class="form-control" id="demo-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group-custom mb-3">
+                        <i class="fas fa-phone-alt"></i>
+                        <input type="tel" class="form-control" id="demo-contact" placeholder="Contact Number" required>
+                    </div>
+                    <button type="submit" class="btn-submit-colorful w-100">
+                        <i class="fab fa-whatsapp"></i> Request Demo on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
