@@ -1275,91 +1275,149 @@ body {
     to { opacity: 1; }
 }
 
-/* --- ABOUT US / IT HUB SECTION (Final Correct Code) --- */
-
-/* === DESKTOP SATHI STYLES (He General Rules Ahet) === */
-.about-hub-section {
-    background: var(--card-bg, #FFFFFF);
-    padding: 80px 0;
-    overflow: hidden;
-}
-.about-content .section-title {
-    text-align: left;
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-.about-content h3 {
-    font-weight: 600;
-    font-size: 1.2rem;
-}
-.animation-wrapper {
-    position: relative;
+/* --- Enquiry Pop-up Modal (FINAL - Adjusted Height) --- */
+.enquiry-modal {
+    display: none; 
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
     width: 100%;
-    min-height: 400px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 15px;
 }
-.animation-wrapper::before,
-.animation-wrapper::after {
-    content: '';
-    position: absolute;
-    border: 2px dashed #e0e0e0;
-    width: 70%;
-    height: 70%;
-    border-radius: 50%;
-    animation: rotate 30s linear infinite;
-}
-.animation-wrapper::after {
+
+.enquiry-modal-content {
     width: 100%;
-    height: 100%;
-    animation-direction: reverse;
-    animation-duration: 40s;
+    max-width: 800px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    display: flex;
+    overflow: hidden;
 }
-.orbit-icon {
+
+.close-btn {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    font-size: 1.8rem;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1051;
+}
+.close-btn:hover {
+    color: #333;
 }
 
+.modal-left-panel {
+    background-color: #E07A5F;
+    color: white;
+    padding: 40px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.modal-left-panel h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.3;
+}
+.modal-left-panel .modal-logo {
+    max-width: 150px;
+    margin-top: 30px;
+}
 
-/* === MOBILE/TABLET SATHI STYLES (Ha 'Magical Box' Ahe) === */
-/* ITHE LIHILELA CODE FAKT MOBILE/TABLET VAR CHALEL */
-@media (max-width: 991.98px) {
+.modal-right-panel {
+    background: #FFFFFF;
+    padding: 40px;
+    width: 55%;
+}
+
+.modal-right-panel .form-control {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 12px; /* Default Padding */
+}
+.modal-right-panel .mb-3 {
+    margin-bottom: 1rem; /* Default Margin */
+}
+.btn-send {
+    background-color: #81B29A;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* === RESPONSIVE FOR MOBILE (TUMCHYA IDEA NUSAR BADAL) === */
+@media (max-width: 768px) {
+    .enquiry-modal-content {
+        flex-direction: column;
+        width: 100%; 
+        max-width: 400px;
+    }
     
-    .about-hub-section {
-        padding: 60px 0; /* Desktop chya 80px la dhakka na lavta, fakt mobile var 60px zale */
+    .modal-left-panel {
+        width: 100%;
+        /* === HEIGHT KAMI KARNYASATHI BADAL === */
+        padding: 20px 20px 15px 20px; /* Padding khup kami keli (Top, Sides, Bottom) */
+    }
+    .modal-left-panel h2 {
+        font-size: 1.3rem; /* 'Get in touch' chi font size lahan keli */
+        line-height: 1.3;
+        margin-bottom: 0; /* Extra margin kadhli */
+    }
+    .modal-left-panel .modal-logo {
+        max-width: 90px; /* Logo chi size kami keli */
+        margin-top: 10px;
     }
 
-    .about-content {
-        text-align: center; 
-    }
-
-    .about-content .section-title {
-        text-align: center;
-        font-size: 2rem; /* Font lahan zala, pan fakt mobile var */
-    }
-
-    .animation-wrapper {
-        min-height: 350px; /* Height kami zali, pan fakt mobile var */
-        margin-top: 40px; 
-    }
-
-    .animation-wrapper::after {
-        width: 95%;   
-        height: 95%;
-    }
-
-    .animation-wrapper::before {
-        width: 65%;   
-        height: 65%;
+    .modal-right-panel {
+        width: 100%;
+        padding: 25px; /* Form chi padding pan kami keli */
     }
     
-    .orbit-icon {
-        width: 50px; /* Icon lahan zala, pan fakt mobile var */
-        height: 50px;
-        font-size: 1.5rem;
+    /* Form fields madhil jaga kami keli */
+    .modal-right-panel .mb-3 {
+        margin-bottom: 0.75rem !important;
+    }
+    /* Form fields chi height kami keli */
+    .modal-right-panel .form-control {
+        padding: 10px 12px;
+    }
+
+    .close-btn {
+        color: white; /* Close button red panel var changla disel */
+        background-color: rgba(0,0,0,0.2);
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        line-height: 1;
+        top: 10px;
+        right: 10px;
     }
 }
 
