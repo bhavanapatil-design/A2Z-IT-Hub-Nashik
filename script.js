@@ -514,3 +514,196 @@ document.addEventListener('DOMContentLoaded', function() {
             this.form.reset();
         }
     });
+document.addEventListener('DOMContentLoaded', function() {
+
+    // 1. Enquiry Modal Popup Logic
+    const enquiryModal = document.getElementById('enquiryModal');
+    const openBtn = document.getElementById('openEnquiryModalBtn');
+    const closeBtn = document.getElementById('closeEnquiryModalBtn');
+
+    // Function to open modal
+    const openModal = () => {
+        enquiryModal.style.display = 'block';
+    };
+
+    // Function to close modal
+    const closeModal = () => {
+        enquiryModal.style.display = 'none';
+    };
+
+    // Show modal after 5 seconds, but only once per session
+    if (!sessionStorage.getItem('modalShown')) {
+        setTimeout(() => {
+            openModal();
+            sessionStorage.setItem('modalShown', 'true');
+        }, 5000); // 5 seconds delay
+    }
+
+    // Event listeners for buttons
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close modal if clicked outside the content
+    window.addEventListener('click', (event) => {
+        if (event.target === enquiryModal) {
+            closeModal();
+        }
+    });
+
+    // 2. Course Card Flip Logic
+    const flipButtons = document.querySelectorAll('.flip-btn, .flip-back-btn');
+    flipButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.closest('.course-card').classList.toggle('is-flipped');
+        });
+    });
+
+    // 3. Stats Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the #, the faster the count
+
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(() => animateCounter(counter), 1);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                animateCounter(counter);
+                observer.unobserve(counter); // Stop observing after animation starts
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+
+    // 4. Hiring Partners Logo Scroller (Seamless Loop)
+    const scrollers = document.querySelectorAll(".logo-scroller");
+    if (scrollers.length > 0) {
+        scrollers.forEach((scroller) => {
+            const scrollerInner = scroller.querySelector(".scroller-inner");
+            const scrollerContent = Array.from(scrollerInner.children);
+
+            scrollerContent.forEach((item) => {
+                const duplicatedItem = item.cloneNode(true);
+                duplicatedItem.setAttribute("aria-hidden", true);
+                scrollerInner.appendChild(duplicatedItem);
+            });
+        });
+    }
+
+    // 5. Testimonials Slider (SwiperJS)
+    const swiper = new Swiper('.success-slider', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        grabCursor: true,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            }
+        }
+    });
+
+    // 6. Particle.js for Hero Background
+    const canvas = document.getElementById('particle-canvas');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = canvas.parentElement.offsetHeight;
+
+        let particlesArray;
+
+        const mouse = {
+            x: null,
+            y: null,
+            radius: (canvas.height / 120) * (canvas.width / 120)
+        };
+
+        window.addEventListener('mousemove', (event) => {
+            let rect = canvas.getBoundingClientRect();
+            mouse.x = event.clientX - rect.left;
+            mouse.y = event.clientY - rect.top;
+        });
+
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = '#E07A5F33'; // Semi-transparent terracotta
+                ctx.fill();
+            }
+            update() {
+                if (this.x > canvas.width || this.x < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.directionY = -this.directionY;
+                }
+                this.x += this.directionX;
+                this.y += this.directionY;
+                this.draw();
+            }
+        }
+
+        function init() {
+            particlesArray = [];
+            let numberOfParticles = (canvas.height * canvas.width) / 9000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 5) + 1;
+                let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * 0.4) - 0.2;
+                let directionY = (Math.random() * 0.4) - 0.2;
+                let color = '#E07A5F';
+                particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+        }
+        init();
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = canvas.parentElement.offsetHeight;
+            mouse.radius = ((canvas.height / 80) * (canvas.height / 80));
+            init();
+        });
+    }
+
+});
