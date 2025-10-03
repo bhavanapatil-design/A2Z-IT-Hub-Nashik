@@ -1151,27 +1151,29 @@ body {
 .counselor-text a:hover {
     color: var(--accent-terracotta, #E67E22);
 }
-/* === RESPONSIVE CSS FOR FOOTER === */
 @media (max-width: 767.98px) {
+    /* Je columns purn width ghet ahet, tyana center la anla */
     .footer-widget,
     .footer-bottom .col-md-6 {
-        text-align: center; /* Sarva content center la anla */
+        text-align: center;
     }
     
+    /* Company ani Internship che columns left la thevle */
+    .col-sm-6 .footer-widget {
+        text-align: left;
+    }
+
     .footer-links {
-        display: inline-block; /* Links pan center la thevlya */
+        display: inline-block;
         text-align: left;
     }
     
     .footer-socials {
-        justify-content: center; /* Social icons center la anle */
+        justify-content: center;
     }
 
     .footer-bottom .text-md-end {
-        text-align: center !important; /* Phone number pan center la anla */
-    }
-    .footer-bottom .col-md-6 {
-        margin-bottom: 10px;
+        text-align: center !important;
     }
 }
 /* Floating WhatsApp Button */
