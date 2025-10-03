@@ -1037,38 +1037,86 @@ body {
         font-size: 1.6rem;
     }
 }
-/* --- Certification Section --- */
-.certification-content h3 {
-            font-weight: 700;
-            color: var(--primary-text-color);
-            margin-bottom: 20px;
-        }
-        .certification-content h4.certification-subtitle {
-            color: var(--accent-color);
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        .certification-content p {
-            color: #555;
-            line-height: 1.7;
-            
-        }
-
-        /* --- Image Hover Effect Styling --- */
-        /* तुमच्या existing CSS मध्ये हे एड करा किंवा बदला */
-.certificate-image-wrapper img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px; /* Optional: adds rounded corners */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
-    filter: blur(10px); /* हा मुख्य बदल आहे - इमेजला ब्लर करतो */
-    transition: filter 0.3s ease; /* Optional: ब्लर इफेक्टसाठी स्मूथ ट्रांझिशन */
+/* --- Certification Section - Gallery Styles --- */
+.certifications-section {
+    padding: 60px 0; /* Section la var-khali padding dila */
+    background-color: #f8f8f8; /* Background color */
 }
-        
-        .certificate-image-wrapper:hover img {
-            transform: scale(1.05); /* Slightly zoom in */
-            filter: blur(2px); /* Apply blur effect */
-        }
+
+.certifications-section .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.certifications-section .section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-text-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.certifications-section .section-header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.cert-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Desktop sathi responsive grid */
+    gap: 25px; /* Images madhe jaga */
+    max-width: 1200px; /* Gallery chi maximum width */
+    margin: 0 auto; /* Gallery la center madhe anla */
+}
+
+.cert-item {
+    display: block; /* Link mule image block level cha disel */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-item img {
+    width: 100%;
+    height: 200px; /* Images chi fixed height */
+    object-fit: cover; /* Images fit hoti, crop nahi honar */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.cert-item:hover {
+    transform: translateY(-5px); /* Hover var thoda var yeil */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.cert-item:hover img {
+    transform: scale(1.05); /* Hover var zoom in hoil */
+}
+
+
+/* === RESPONSIVE CODE FOR MOBILE === */
+@media (max-width: 767.98px) {
+    .certifications-section {
+        padding: 40px 15px; /* Mobile sathi padding kami keli */
+    }
+
+    .certifications-section .section-header {
+        margin-bottom: 30px;
+    }
+    .certifications-section .section-header h2 {
+        font-size: 2rem;
+    }
+    .certifications-section .section-header p {
+        font-size: 1rem;
+    }
+
+    .cert-gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Mobile sathi lahan grid */
+        gap: 15px; /* Mobile var images madhe kami jaga */
+    }
+    
+    .cert-item img {
+        height: 150px; /* Mobile var images chi height kami keli */
+    }
+}
 /* --- New Footer Design --- */
 .site-footer {
     background-color: var(--text-dark, #2c3e50);
