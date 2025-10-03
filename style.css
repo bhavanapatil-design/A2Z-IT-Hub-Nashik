@@ -322,13 +322,11 @@ body {
                 transform: translateY(0);
             }
         }
-
- /* --- About Us / IT Hub Section --- */
-/* --- Tumcha Original About Us Section Cha CSS --- */
+/* --- ABOUT US SECTION (FINAL & COMPLETE RESPONSIVE CODE) --- */
 .about-hub-section {
     background: var(--card-bg, #FFFFFF);
     padding: 80px 0;
-    overflow: hidden; /* Extra content hide karel */
+    overflow: hidden;
 }
 
 .about-content .section-title {
@@ -349,7 +347,7 @@ body {
     height: 4px;
     background: #E07A5F;
     bottom: 0;
-    left: 0; /* By default left la thevla ahe */
+    left: 0;
 }
 
 .about-content .section-title span {
@@ -455,25 +453,22 @@ body {
     z-index: 1;
 }
 
-/* Icons na position denyasathi (he add kara) */
 .icon-1 { top: 0; left: 42%; }
 .icon-2 { top: 25%; right: 0; }
 .icon-3 { top: 75%; right: 0; }
 .icon-4 { bottom: 0; left: 42%; }
 .icon-5 { top: 75%; left: 0; }
 .icon-6 { top: 25%; left: 0; }
-/* .icon-7 { top: 50%; left: 10%; }
-.icon-8 { top: 50%; right: 10%; } */
 
 
-/* === NAVIN RESPONSIVE CODE (Ha Add Kara) === */
-
-/* === NAVIN RESPONSIVE CODE (Ha Add Kara) === */
+/* ==================================================== */
+/* === NAVIN RESPONSIVE CODE (Ha Purna Block Add Kara) === */
+/* ==================================================== */
 
 /* For Tablets & Mobiles (991px peksha kami screen width) */
 @media (max-width: 991.98px) {
 
-    /* === ABOUT SECTION TEXT (He adhipasunach asel) === */
+    /* === Text Section === */
     .about-hub-section {
         padding: 60px 0;
     }
@@ -489,6 +484,53 @@ body {
         transform: translateX(-50%);
     }
 
+    /* === Animation Section === */
+    .animation-wrapper {
+        min-height: 350px; /* Animation chi total height kami keli */
+        margin-top: 40px; /* Text ani animation madhe jaga sodli */
+    }
+
+    /* Motha (Paher cha) dashed circle lahan kela */
+    .animation-wrapper::after {
+        width: 95%;   
+        height: 95%;
+    }
+
+    /* Lahan (Atla) dashed circle pan lahan kela */
+    .animation-wrapper::before {
+        width: 65%;   
+        height: 65%;
+    }
+    
+    /* Orbit madhil icons chi size kami keli */
+    .orbit-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+/* For Small Mobiles (576px peksha kami screen width) */
+@media (max-width: 576px) {
+    .animation-wrapper {
+        min-height: 300px; /* Height ajun kami keli */
+    }
+
+    /* Icons ajun lahan kele */
+    .orbit-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .center-logo {
+        width: 80px;
+        height: 80px;
+    }
+     .center-logo img {
+        height: 40px;
+    }
+}
     /* === ANIMATION CIRCLE SATHI NAVIN CHANGES === */
     .animation-wrapper {
         min-height: 320px; /* Animation chi total height kami keli */
@@ -740,22 +782,7 @@ body {
 }
 /* === RESPONSIVE CSS FOR STATS SECTION === */
 
-/* For Tablets & Mobiles (991px peksha kami screen width) */
-@media (max-width: 991.98px) {
-    .stat-box {
-        margin-bottom: 20px; /* Pratyek jodi madhe thodi jaga sodli */
-    }
 
-    .stat-box h2 {
-        font-size: 2.5rem; /* Number chi font size thodi kami keli */
-    }
-
-    .stat-box .icon-wrapper {
-        width: 70px; /* Icon cha circle lahan kela */
-        height: 70px;
-        font-size: 2rem; /* Icon lahan kela */
-    }
-}
 /* --- Hiring Organizations Scroller (3 Rows) --- */
 /* --- Hiring Organizations Scroller --- */
 .hiring-section {
