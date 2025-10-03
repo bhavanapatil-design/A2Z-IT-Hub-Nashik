@@ -1178,8 +1178,9 @@ body {
 }
 
 /* --- Enquiry Pop-up Modal --- */
+/* --- Enquiry Pop-up Modal (FINAL & COMPLETE RESPONSIVE CODE) --- */
 .enquiry-modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     z-index: 1050;
     left: 0;
@@ -1208,13 +1209,13 @@ body {
 
 .close-btn {
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 20px;
     color: #aaa;
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 2;
+    z-index: 1051; /* Ensures it's above other content */
 }
 .close-btn:hover {
     color: #333;
@@ -1228,6 +1229,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* Content center la anla */
+    text-align: center; /* Text center la anla */
 }
 .modal-left-panel h2 {
     font-weight: 700;
@@ -1237,8 +1240,6 @@ body {
 .modal-left-panel .modal-logo {
     max-width: 150px;
     margin-top: 30px;
-    margin-left: 40px;
-    /* filter: brightness(0) invert(1);  */
 }
 
 .modal-right-panel {
@@ -1275,24 +1276,40 @@ body {
     to { opacity: 1; }
 }
 
-/* Responsive for mobile */
+/* === RESPONSIVE FOR MOBILE (MAHATVACHE BADAL ITHE AHE) === */
 @media (max-width: 768px) {
     .enquiry-modal-content {
         flex-direction: column;
         max-width: 400px;
+        /* === HE NAVIN ADD KELE AHE === */
+        max-height: 90vh; /* Popup chi max height screen chya 90% thevli */
+        overflow-y: auto;   /* Jar content jast asel tar scrollbar yeil */
     }
     .modal-left-panel, .modal-right-panel {
-        width: 50%;
+        width: 100%;
+        padding: 30px 25px; /* Padding thodi kami keli */
     }
-    .modal-left-panel {
-        text-align: center;
+    
+    .modal-left-panel .modal-logo {
+        max-width: 120px; /* Logo thoda lahan kela */
+        margin-top: 20px;
     }
+
     .close-btn {
-        color: #333; /* Make it visible on white bg */
+        color: #333; /* Mobile var close button disnyasathi */
+        background-color: white; /* Background dila */
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        line-height: 1;
+        top: 10px;
+        right: 10px;
     }
 }
-
-
 /* body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f2f5;
