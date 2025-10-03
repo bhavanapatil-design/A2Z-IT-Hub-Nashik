@@ -1037,111 +1037,38 @@ body {
         font-size: 1.6rem;
     }
 }
-/* --- Certification Section - FINAL UPDATED CODE --- */
-.certifications-section {
-    padding: 60px 0;
-    background-color: #f8f8f8;
-}
+/* --- Certification Section --- */
+.certification-content h3 {
+            font-weight: 700;
+            color: var(--primary-text-color);
+            margin-bottom: 20px;
+        }
+        .certification-content h4.certification-subtitle {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .certification-content p {
+            color: #555;
+            line-height: 1.7;
+            
+        }
 
-.certifications-section .section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-.certifications-section .section-header h2 {
-    font-size: 2.5rem;
-    color: var(--primary-text-color);
-    font-weight: 700;
-}
-.certifications-section .section-header p {
-    font-size: 1.1rem;
-    color: #6c757d;
-}
-
-.cert-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.cert-item {
-    display: block;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    position: relative; /* Icon sathi important */
-}
-
-.cert-item img {
+        /* --- Image Hover Effect Styling --- */
+        /* तुमच्या existing CSS मध्ये हे एड करा किंवा बदला */
+.certificate-image-wrapper img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+    filter: blur(10px); /* हा मुख्य बदल आहे - इमेजला ब्लर करतो */
+    transition: filter 0.3s ease; /* Optional: ब्लर इफेक्टसाठी स्मूथ ट्रांझिशन */
 }
-
-/* === NAVIN: Hover Overlay === */
-.cert-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(224, 122, 95, 0.7); /* Tumchya theme cha color */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/* === NAVIN: Hover Icon === */
-.cert-item::before {
-    content: '\f002'; /* Font Awesome search icon (magnifying glass) */
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2.5rem;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 2;
-}
-
-/* === NAVIN: Hover Effect Trigger === */
-.cert-item:hover::after,
-.cert-item:hover::before {
-    opacity: 1;
-}
-.cert-item:hover::before {
-    transform: translate(-50%, -50%) scale(1.1);
-}
-.cert-item:hover img {
-    transform: scale(1.1);
-}
-
-
-/* === RESPONSIVE CODE FOR MOBILE === */
-@media (max-width: 767.98px) {
-    .certifications-section {
-        padding: 40px 15px;
-    }
-    .certifications-section .section-header h2 {
-        font-size: 2rem;
-    }
-    .cert-gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* Mobile var 2 columns */
-        gap: 15px;
-    }
-    .cert-item img {
-        height: 120px;
-    }
-    .cert-item::before {
-        font-size: 2rem; /* Mobile var icon lahan kela */
-    }
-}
+        
+        .certificate-image-wrapper:hover img {
+            transform: scale(1.05); /* Slightly zoom in */
+            filter: blur(2px); /* Apply blur effect */
+        }
 /* --- New Footer Design --- */
 .site-footer {
     background-color: var(--text-dark, #2c3e50);
