@@ -73,7 +73,7 @@ body {
     }
 
     .navbar-brand img {
-        height: 60px; /* Mobile var logo thoda lahan kela */
+        height:40px; /* Mobile var logo thoda lahan kela */
     }
 
     /* Hamburger button chi default border kadhun takli */
@@ -398,7 +398,32 @@ body {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+/* For Tablets & Mobiles (991px peksha kami screen width) */
+@media (max-width: 991.98px) {
+    .about-hub-section {
+        padding: 60px 0; /* Thodi padding kami keli */
+    }
 
+    .about-content {
+        text-align: center; /* Sarva text la center madhe anla */
+    }
+
+    .about-content .section-title {
+        text-align: center;
+        font-size: 2rem; /* Title thoda lahan kela */
+    }
+
+    /* Title chya khali asleli line center la keli */
+    .about-content .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .animation-wrapper {
+        min-height: 350px; /* Animation chi height kami keli */
+        margin-top: 40px; /* Text ani animation madhe jaga sodli */
+    }
+}
 .center-logo {
     width: 80px;
     height: 80px;

@@ -514,3 +514,24 @@ document.addEventListener('DOMContentLoaded', function() {
             this.form.reset();
         }
     });
+document.addEventListener("DOMContentLoaded", function() {
+    // Mobile navbar links select kara
+    const navLinks = document.querySelectorAll('.navbar-collapse .nav-link');
+    
+    // Hamburger button select kara
+    const navToggler = document.querySelector('.navbar-toggler');
+    
+    // Collapsible menu cha div select kara
+    const collapsibleNav = document.querySelector('.navbar-collapse');
+
+    // Sarva links sathi event listener add kara
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            // Check kara ki menu open ahe ka
+            if (collapsibleNav.classList.contains('show')) {
+                // Open aslyas, hamburger button var click karun tyala band kara
+                navToggler.click();
+            }
+        });
+    });
+});
