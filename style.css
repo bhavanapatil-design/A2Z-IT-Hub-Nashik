@@ -1282,7 +1282,7 @@ body {
         flex-direction: column;
         max-width: 400px;
         /* === HE NAVIN ADD KELE AHE === */
-        max-height: 90vh; /* Popup chi max height screen chya 90% thevli */
+        max-height: 70vh; /* Popup chi max height screen chya 90% thevli */
         overflow-y: auto;   /* Jar content jast asel tar scrollbar yeil */
     }
     .modal-left-panel, .modal-right-panel {
@@ -1291,7 +1291,7 @@ body {
     }
     
     .modal-left-panel .modal-logo {
-        max-width: 120px; /* Logo thoda lahan kela */
+        max-width: 90px; /* Logo thoda lahan kela */
         margin-top: 20px;
     }
 
