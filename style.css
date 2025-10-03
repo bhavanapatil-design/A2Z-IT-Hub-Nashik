@@ -13,6 +13,7 @@ body {
     font-family: var(--poppins-font);
     background-color: var(--bg-light);
     color: var(--text-dark);
+     overflow-x: hidden;
 }
 
 /* --- Hero Section & Navbar (New Theme) --- */
@@ -1150,7 +1151,29 @@ body {
 .counselor-text a:hover {
     color: var(--accent-terracotta, #E67E22);
 }
+/* === RESPONSIVE CSS FOR FOOTER === */
+@media (max-width: 767.98px) {
+    .footer-widget,
+    .footer-bottom .col-md-6 {
+        text-align: center; /* Sarva content center la anla */
+    }
+    
+    .footer-links {
+        display: inline-block; /* Links pan center la thevlya */
+        text-align: left;
+    }
+    
+    .footer-socials {
+        justify-content: center; /* Social icons center la anle */
+    }
 
+    .footer-bottom .text-md-end {
+        text-align: center !important; /* Phone number pan center la anla */
+    }
+    .footer-bottom .col-md-6 {
+        margin-bottom: 10px;
+    }
+}
 /* Floating WhatsApp Button */
 .whatsapp-float {
     position: fixed;
