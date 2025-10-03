@@ -738,7 +738,24 @@ body {
     font-weight: 500;
     color: var(--text-light, #7f8c8d);
 }
+/* === RESPONSIVE CSS FOR STATS SECTION === */
 
+/* For Tablets & Mobiles (991px peksha kami screen width) */
+@media (max-width: 991.98px) {
+    .stat-box {
+        margin-bottom: 20px; /* Pratyek jodi madhe thodi jaga sodli */
+    }
+
+    .stat-box h2 {
+        font-size: 2.5rem; /* Number chi font size thodi kami keli */
+    }
+
+    .stat-box .icon-wrapper {
+        width: 70px; /* Icon cha circle lahan kela */
+        height: 70px;
+        font-size: 2rem; /* Icon lahan kela */
+    }
+}
 /* --- Hiring Organizations Scroller (3 Rows) --- */
 /* --- Hiring Organizations Scroller --- */
 .hiring-section {
@@ -954,7 +971,43 @@ body {
     height: 100%;
     border: none;
 }
+/* === CONTACT & DEMO SECTION SATHI RESPONSIVE CODE === */
 
+/* For Tablets & Mobiles (991px peksha kami screen width) */
+@media (max-width: 991.98px) {
+    
+    /* 1. Section chi extra margin kami keli */
+    .contact-demo-section {
+        margin: 30px 15px; /* Var-khali 30px, Dava-ujva 15px margin */
+        padding: 40px 20px; /* Atmadhil padding pan kami keli */
+    }
+
+    /* 2. Stack zalele content madhe jaga sodli */
+    .contact-text-wrapper,
+    .character-image-middle {
+        margin-bottom: 40px;
+    }
+
+    /* 3. Image la PERFECTLY CENTER madhe anla */
+    .character-image-middle img {
+        margin-left: 0; /* Negative margin kadhun takli */
+        max-width: 260px; /* Size thodi adjust keli */
+        height: auto;
+    }
+    
+    /* 4. Video box chi size vadhvli */
+    .video-container {
+        max-width: 100%; /* Video box la purn available jaga dili */
+    }
+
+    /* 5. Font sizes thodya lahan kelya */
+    .contact-text-wrapper h2 {
+        font-size: 1.8rem;
+    }
+    .demo-lecture-wrapper h3 {
+        font-size: 1.6rem;
+    }
+}
 /* --- Certification Section --- */
 .certification-content h3 {
             font-weight: 700;
