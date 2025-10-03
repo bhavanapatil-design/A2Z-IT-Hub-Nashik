@@ -66,7 +66,39 @@ body {
     transition: all 0.3s ease-out; /* For the smooth hover effect */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+/* For Tablets & Mobiles (991px peksha kami screen width) */
+@media (max-width: 991.98px) {
+    .navbar {
+        height: 80px; /* Mobile var thodi height kami keli */
+    }
 
+    .navbar-brand img {
+        height: 60px; /* Mobile var logo thoda lahan kela */
+    }
+
+    /* Hamburger button chi default border kadhun takli */
+    .navbar-toggler {
+        border: none;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    /* Menu open zalyavar disnara box */
+    .navbar-collapse {
+        background-color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* Menu items madhe space add keli */
+    .navbar .nav-link {
+        padding: 10px 0;
+    }
+}
 /* --- New Hover Effect --- */
 .btn-free-demo:hover {
     background-color: #e94545; /* Darker red on hover */
@@ -2372,107 +2404,3 @@ body {
     .terms-container h2 { font-size: 1.5rem; }
 }
 
-/* For Tablets and smaller devices (<= 991px) */
-@media (max-width: 991.98px) {
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-    .hero-content {
-        padding-top: 30px;
-        text-align: center;
-    }
-    .hero-text .tags, .action-buttons {
-        justify-content: center;
-    }
-    .contact-form-glass {
-        margin-top: 40px;
-    }
-    .about-hub-section .row {
-        flex-direction: column-reverse;
-    }
-    .about-content {
-        text-align: center;
-    }
-    .about-content .section-title {
-        text-align: center;
-    }
-    .about-content .section-title::after{
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .animation-wrapper {
-        margin-top: 40px;
-        min-height: 350px;
-    }
-    .footer-widget{
-        margin-bottom: 30px;
-    }
-}
-
-
-/* For Mobile phones (<= 767px) */
-@media (max-width: 767.98px) {
-    .navbar-brand img {
-        height: 50px;
-    }
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-    .hero-text .tags span {
-        margin-right: 5px;
-        padding-right: 10px;
-    }
-    .hero-text .tags span:not(:last-child)::after {
-        right: -2px;
-    }
-
-    .stat-box h2 {
-        font-size: 2rem;
-    }
-    .stat-box p {
-        font-size: 0.9rem;
-    }
-    
-    .courses-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .enquiry-modal-content {
-        flex-direction: column;
-        max-width: 400px;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-    .modal-left-panel, .modal-right-panel {
-        width: 100%;
-        padding: 30px;
-    }
-    .modal-left-panel {
-        text-align: center;
-    }
-    .modal-left-panel .modal-logo {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .close-btn {
-        color: var(--text-dark); /* Make it visible on white bg */
-    }
-
-    .footer-bottom .row{
-        text-align: center;
-    }
-     .footer-bottom .col-md-6 {
-        margin-bottom: 10px;
-    }
-}
-
-/* For small mobile phones (<= 576px) */
-@media (max-width: 575.98px) {
-    .action-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    .action-buttons .btn {
-        width: 80%;
-    }
-}
