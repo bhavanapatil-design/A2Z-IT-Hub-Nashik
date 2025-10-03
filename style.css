@@ -1275,47 +1275,91 @@ body {
     to { opacity: 1; }
 }
 
-/* === RESPONSIVE FOR MOBILE (TUMCHYA IDEA NUSAR BADAL) === */
-@media (max-width: 768px) {
-    .enquiry-modal-content {
-        flex-direction: column;
-        width: 100%; 
-        max-width: 400px;
-        /* Scrollbar kadhun takla */
+/* --- ABOUT US / IT HUB SECTION (Final Correct Code) --- */
+
+/* === DESKTOP SATHI STYLES (He General Rules Ahet) === */
+.about-hub-section {
+    background: var(--card-bg, #FFFFFF);
+    padding: 80px 0;
+    overflow: hidden;
+}
+.about-content .section-title {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.about-content h3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.animation-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.animation-wrapper::before,
+.animation-wrapper::after {
+    content: '';
+    position: absolute;
+    border: 2px dashed #e0e0e0;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    animation: rotate 30s linear infinite;
+}
+.animation-wrapper::after {
+    width: 100%;
+    height: 100%;
+    animation-direction: reverse;
+    animation-duration: 40s;
+}
+.orbit-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+}
+
+
+/* === MOBILE/TABLET SATHI STYLES (Ha 'Magical Box' Ahe) === */
+/* ITHE LIHILELA CODE FAKT MOBILE/TABLET VAR CHALEL */
+@media (max-width: 991.98px) {
+    
+    .about-hub-section {
+        padding: 60px 0; /* Desktop chya 80px la dhakka na lavta, fakt mobile var 60px zale */
+    }
+
+    .about-content {
+        text-align: center; 
+    }
+
+    .about-content .section-title {
+        text-align: center;
+        font-size: 2rem; /* Font lahan zala, pan fakt mobile var */
+    }
+
+    .animation-wrapper {
+        min-height: 350px; /* Height kami zali, pan fakt mobile var */
+        margin-top: 40px; 
+    }
+
+    .animation-wrapper::after {
+        width: 95%;   
+        height: 95%;
+    }
+
+    .animation-wrapper::before {
+        width: 65%;   
+        height: 65%;
     }
     
-    .modal-left-panel {
-        width: 100%;
-        /* === HEIGHT KAMI KARNYASATHI BADAL === */
-        padding: 25px 20px; /* Padding khup kami keli */
-    }
-    .modal-left-panel h2 {
-        font-size: 1.5rem; /* 'Get in touch' chi font size lahan keli */
-        line-height: 1.4;
-    }
-    .modal-left-panel .modal-logo {
-        max-width: 100px; /* Logo chi size kami keli */
-        margin-top: 15px;
-    }
-
-    .modal-right-panel {
-        width: 100%;
-        padding: 30px 25px; /* Form chi padding pan thodi kami keli */
-    }
-
-    .close-btn {
-        color: #333;
-        background-color: white;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        line-height: 1;
-        top: 10px;
-        right: 10px;
+    .orbit-icon {
+        width: 50px; /* Icon lahan zala, pan fakt mobile var */
+        height: 50px;
+        font-size: 1.5rem;
     }
 }
 
