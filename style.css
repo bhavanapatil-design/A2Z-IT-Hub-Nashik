@@ -1157,7 +1157,13 @@ body {
     .footer-bottom .col-md-6 {
         text-align: center;
     }
-    
+    /* === COMPANY & INTERNSHIP LA BAJU-BAJU LA THEVNYASATHI (FORCEFUL FIX) === */
+@media (max-width: 767.98px) {
+    .site-footer .row > .col-sm-6 {
+        width: 50% !important; /* Force karun width 50% keli */
+        float: left;           /* Force karun baju-baju la anle */
+    }
+}
     /* Company ani Internship che columns left la thevle */
     .col-sm-6 .footer-widget {
         text-align: left;
