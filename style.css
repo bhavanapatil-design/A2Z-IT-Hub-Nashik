@@ -1178,9 +1178,8 @@ body {
 }
 
 /* --- Enquiry Pop-up Modal --- */
-/* --- Enquiry Pop-up Modal (FINAL & FORCEFUL CODE) --- */
 .enquiry-modal {
-    display: none; 
+    display: none; /* Hidden by default */
     position: fixed;
     z-index: 1050;
     left: 0;
@@ -1191,49 +1190,44 @@ body {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     animation: fadeIn 0.3s;
-    /* === NAVIN BADAL: Flexbox ne center kela === */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px; /* Kadhikadhi screen la chitkun diste, tyasathi padding */
 }
 
 .enquiry-modal-content {
-    /* position, top, left, transform kadhun takle */
-    width: 100%; /* Width 100% thevli, pan max-width ne control hoil */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
     max-width: 800px;
-    background: #FFFFFF;
+    background: var(--card-bg, #FFFFFF);
     border-radius: 15px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.2);
     display: flex;
     overflow: hidden;
-    /* Flexbox parent mule he automatically center la yeil */
 }
 
 .close-btn {
     position: absolute;
-    top: 15px;
+    top: 10px;
     right: 20px;
     color: #aaa;
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1051;
+    z-index: 2;
 }
 .close-btn:hover {
     color: #333;
 }
 
 .modal-left-panel {
-    background-color: #E07A5F;
+    background-color: var(--accent-terracotta, #E07A5F);
     color: white;
     padding: 40px;
     width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 .modal-left-panel h2 {
     font-weight: 700;
@@ -1243,26 +1237,37 @@ body {
 .modal-left-panel .modal-logo {
     max-width: 150px;
     margin-top: 30px;
+    margin-left: 40px;
+    /* filter: brightness(0) invert(1);  */
 }
 
 .modal-right-panel {
-    background: #FFFFFF;
+    background: var(--card-bg, #FFFFFF);
     padding: 40px;
     width: 55%;
 }
 
 .modal-right-panel .form-control {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
+    background-color: var(--bg-light, #f8f9fa);
+    border: 1px solid var(--border-color, #dee2e6);
 }
+.modal-right-panel .form-check-label {
+    font-size: 0.9rem;
+    color: var(--text-light, #6c757d);
+}
+
 .btn-send {
-    background-color: #81B29A;
+    background-color: var(--accent-sage, #81B29A);
     color: white;
     width: 100%;
     padding: 12px;
     font-weight: 600;
     border: none;
     border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.btn-send:hover {
+    filter: brightness(1.1);
 }
 
 @keyframes fadeIn {
@@ -1270,24 +1275,32 @@ body {
     to { opacity: 1; }
 }
 
-/* === RESPONSIVE FOR MOBILE (MAHATVACHE BADAL ITHE AHE) === */
+/* === RESPONSIVE FOR MOBILE (TUMCHYA IDEA NUSAR BADAL) === */
 @media (max-width: 768px) {
     .enquiry-modal-content {
         flex-direction: column;
-        width: 100%; /* Purna available width ghe */
+        width: 100%; 
         max-width: 400px;
-        /* === HE NAVIN FORCEFUL RULES AHE === */
-        max-height: 90vh !important; /* Popup chi max height force keli */
-        overflow-y: auto !important; /* Scrollbar force kela */
-    }
-    .modal-left-panel, .modal-right-panel {
-        width: 100%;
-        padding: 30px 25px;
+        /* Scrollbar kadhun takla */
     }
     
+    .modal-left-panel {
+        width: 100%;
+        /* === HEIGHT KAMI KARNYASATHI BADAL === */
+        padding: 25px 20px; /* Padding khup kami keli */
+    }
+    .modal-left-panel h2 {
+        font-size: 1.5rem; /* 'Get in touch' chi font size lahan keli */
+        line-height: 1.4;
+    }
     .modal-left-panel .modal-logo {
-        max-width: 120px;
-        margin-top: 20px;
+        max-width: 100px; /* Logo chi size kami keli */
+        margin-top: 15px;
+    }
+
+    .modal-right-panel {
+        width: 100%;
+        padding: 30px 25px; /* Form chi padding pan thodi kami keli */
     }
 
     .close-btn {
@@ -1305,6 +1318,8 @@ body {
         right: 10px;
     }
 }
+
+
 /* body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f2f5;
