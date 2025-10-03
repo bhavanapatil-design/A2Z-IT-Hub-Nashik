@@ -1037,10 +1037,10 @@ body {
         font-size: 1.6rem;
     }
 }
-/* --- Certification Section - Gallery Styles --- */
+/* --- Certification Section - FINAL UPDATED CODE --- */
 .certifications-section {
-    padding: 60px 0; /* Section la var-khali padding dila */
-    background-color: #f8f8f8; /* Background color */
+    padding: 60px 0;
+    background-color: #f8f8f8;
 }
 
 .certifications-section .section-header {
@@ -1051,7 +1051,6 @@ body {
     font-size: 2.5rem;
     color: var(--primary-text-color);
     font-weight: 700;
-    margin-bottom: 10px;
 }
 .certifications-section .section-header p {
     font-size: 1.1rem;
@@ -1060,61 +1059,87 @@ body {
 
 .cert-gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Desktop sathi responsive grid */
-    gap: 25px; /* Images madhe jaga */
-    max-width: 1200px; /* Gallery chi maximum width */
-    margin: 0 auto; /* Gallery la center madhe anla */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .cert-item {
-    display: block; /* Link mule image block level cha disel */
+    display: block;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Icon sathi important */
 }
 
 .cert-item img {
     width: 100%;
-    height: 200px; /* Images chi fixed height */
-    object-fit: cover; /* Images fit hoti, crop nahi honar */
+    height: 200px;
+    object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
 }
 
-.cert-item:hover {
-    transform: translateY(-5px); /* Hover var thoda var yeil */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+/* === NAVIN: Hover Overlay === */
+.cert-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(224, 122, 95, 0.7); /* Tumchya theme cha color */
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
+/* === NAVIN: Hover Icon === */
+.cert-item::before {
+    content: '\f002'; /* Font Awesome search icon (magnifying glass) */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+}
+
+/* === NAVIN: Hover Effect Trigger === */
+.cert-item:hover::after,
+.cert-item:hover::before {
+    opacity: 1;
+}
+.cert-item:hover::before {
+    transform: translate(-50%, -50%) scale(1.1);
+}
 .cert-item:hover img {
-    transform: scale(1.05); /* Hover var zoom in hoil */
+    transform: scale(1.1);
 }
 
 
 /* === RESPONSIVE CODE FOR MOBILE === */
 @media (max-width: 767.98px) {
     .certifications-section {
-        padding: 40px 15px; /* Mobile sathi padding kami keli */
-    }
-
-    .certifications-section .section-header {
-        margin-bottom: 30px;
+        padding: 40px 15px;
     }
     .certifications-section .section-header h2 {
         font-size: 2rem;
     }
-    .certifications-section .section-header p {
-        font-size: 1rem;
-    }
-
     .cert-gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Mobile sathi lahan grid */
-        gap: 15px; /* Mobile var images madhe kami jaga */
+        grid-template-columns: repeat(2, 1fr); /* Mobile var 2 columns */
+        gap: 15px;
     }
-    
     .cert-item img {
-        height: 150px; /* Mobile var images chi height kami keli */
+        height: 120px;
+    }
+    .cert-item::before {
+        font-size: 2rem; /* Mobile var icon lahan kela */
     }
 }
 /* --- New Footer Design --- */
