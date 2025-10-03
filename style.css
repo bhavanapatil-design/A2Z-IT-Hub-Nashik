@@ -1178,7 +1178,7 @@ body {
 }
 
 /* --- Enquiry Pop-up Modal --- */
-/* --- Enquiry Pop-up Modal (FINAL & COMPLETE RESPONSIVE CODE) --- */
+/* --- Enquiry Pop-up Modal (FINAL & FORCEFUL CODE) --- */
 .enquiry-modal {
     display: none; 
     position: fixed;
@@ -1191,20 +1191,23 @@ body {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     animation: fadeIn 0.3s;
+    /* === NAVIN BADAL: Flexbox ne center kela === */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; /* Kadhikadhi screen la chitkun diste, tyasathi padding */
 }
 
 .enquiry-modal-content {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
+    /* position, top, left, transform kadhun takle */
+    width: 100%; /* Width 100% thevli, pan max-width ne control hoil */
     max-width: 800px;
-    background: var(--card-bg, #FFFFFF);
+    background: #FFFFFF;
     border-radius: 15px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.2);
     display: flex;
     overflow: hidden;
+    /* Flexbox parent mule he automatically center la yeil */
 }
 
 .close-btn {
@@ -1215,22 +1218,22 @@ body {
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1051; /* Ensures it's above other content */
+    z-index: 1051;
 }
 .close-btn:hover {
     color: #333;
 }
 
 .modal-left-panel {
-    background-color: var(--accent-terracotta, #E07A5F);
+    background-color: #E07A5F;
     color: white;
     padding: 40px;
     width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Content center la anla */
-    text-align: center; /* Text center la anla */
+    align-items: center;
+    text-align: center;
 }
 .modal-left-panel h2 {
     font-weight: 700;
@@ -1243,32 +1246,23 @@ body {
 }
 
 .modal-right-panel {
-    background: var(--card-bg, #FFFFFF);
+    background: #FFFFFF;
     padding: 40px;
     width: 55%;
 }
 
 .modal-right-panel .form-control {
-    background-color: var(--bg-light, #f8f9fa);
-    border: 1px solid var(--border-color, #dee2e6);
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
 }
-.modal-right-panel .form-check-label {
-    font-size: 0.9rem;
-    color: var(--text-light, #6c757d);
-}
-
 .btn-send {
-    background-color: var(--accent-sage, #81B29A);
+    background-color: #81B29A;
     color: white;
     width: 100%;
     padding: 12px;
     font-weight: 600;
     border: none;
     border-radius: 8px;
-    transition: all 0.3s ease;
-}
-.btn-send:hover {
-    filter: brightness(1.1);
 }
 
 @keyframes fadeIn {
@@ -1280,24 +1274,25 @@ body {
 @media (max-width: 768px) {
     .enquiry-modal-content {
         flex-direction: column;
+        width: 100%; /* Purna available width ghe */
         max-width: 400px;
-        /* === HE NAVIN ADD KELE AHE === */
-        max-height: 70vh; /* Popup chi max height screen chya 90% thevli */
-        overflow-y: auto;   /* Jar content jast asel tar scrollbar yeil */
+        /* === HE NAVIN FORCEFUL RULES AHE === */
+        max-height: 90vh !important; /* Popup chi max height force keli */
+        overflow-y: auto !important; /* Scrollbar force kela */
     }
     .modal-left-panel, .modal-right-panel {
         width: 100%;
-        padding: 30px 25px; /* Padding thodi kami keli */
+        padding: 30px 25px;
     }
     
     .modal-left-panel .modal-logo {
-        max-width: 90px; /* Logo thoda lahan kela */
+        max-width: 120px;
         margin-top: 20px;
     }
 
     .close-btn {
-        color: #333; /* Mobile var close button disnyasathi */
-        background-color: white; /* Background dila */
+        color: #333;
+        background-color: white;
         border-radius: 50%;
         width: 30px;
         height: 30px;
