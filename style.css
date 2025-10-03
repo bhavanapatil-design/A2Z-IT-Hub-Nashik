@@ -531,6 +531,7 @@ body {
         height: 40px;
     }
 }
+
     /* === ANIMATION CIRCLE SATHI NAVIN CHANGES === */
     .animation-wrapper {
         min-height: 320px; /* Animation chi total height kami keli */
@@ -1281,7 +1282,7 @@ body {
         max-width: 400px;
     }
     .modal-left-panel, .modal-right-panel {
-        width: 100%;
+        width: 50%;
     }
     .modal-left-panel {
         text-align: center;
