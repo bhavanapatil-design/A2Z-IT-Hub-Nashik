@@ -324,36 +324,58 @@ body {
         }
 
  /* --- About Us / IT Hub Section --- */
+/* --- Tumcha Original About Us Section Cha CSS --- */
 .about-hub-section {
-    background: var(--card-bg, #f2e9e4);
+    background: var(--card-bg, #FFFFFF);
+    padding: 80px 0;
+    overflow: hidden; /* Extra content hide karel */
 }
 
 .about-content .section-title {
     text-align: left;
     font-size: 2.5rem;
+    font-weight: 700;
     line-height: 1.3;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
 }
+
+.about-content .section-title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #E07A5F;
+    bottom: 0;
+    left: 0; /* By default left la thevla ahe */
+}
+
 .about-content .section-title span {
-    color: var(--accent-terracotta, #E07A5F);
+    color: #E07A5F;
 }
+
 .about-content h3 {
     font-weight: 600;
     font-size: 1.2rem;
     color: var(--text-dark);
     margin-bottom: 20px;
 }
+
 .about-content p {
-    color: var(--text-light, #6c757d);
+    color: #6c757d;
     line-height: 1.8;
 }
+
 .about-content .tagline {
     font-weight: 600;
-    color: var(--accent-terracotta, #E07A5F);
+    color: #E07A5F;
     margin-top: 20px;
 }
+
 .btn-callback {
-    background-color: var(--text-dark, #3D405B);
+    background-color: #3D405B;
     color: white;
     padding: 12px 30px;
     border-radius: 8px;
@@ -363,13 +385,14 @@ body {
     margin-top: 20px;
     transition: all 0.3s ease;
 }
+
 .btn-callback:hover {
-    background-color: var(--accent-terracotta, #E07A5F);
+    background-color: #E07A5F;
     color: white;
     transform: translateY(-3px);
 }
 
-/* Animation Styles */
+/* --- Animation Styles --- */
 .animation-wrapper {
     position: relative;
     width: 100%;
@@ -378,7 +401,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-.animation-wrapper::before, .animation-wrapper::after {
+
+.animation-wrapper::before,
+.animation-wrapper::after {
     content: '';
     position: absolute;
     border: 2px dashed #e0e0e0;
@@ -387,6 +412,7 @@ body {
     border-radius: 50%;
     animation: rotate 30s linear infinite;
 }
+
 .animation-wrapper::after {
     width: 100%;
     height: 100%;
@@ -398,6 +424,50 @@ body {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
+.center-logo {
+    width: 90px;
+    height: 90px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+.center-logo img {
+    height: 45px;
+}
+
+.orbit-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    color: #E07A5F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+/* Icons na position denyasathi (he add kara) */
+.icon-1 { top: 0; left: 42%; }
+.icon-2 { top: 25%; right: 0; }
+.icon-3 { top: 75%; right: 0; }
+.icon-4 { bottom: 0; left: 42%; }
+.icon-5 { top: 75%; left: 0; }
+.icon-6 { top: 25%; left: 0; }
+.icon-7 { top: 50%; left: -10%; }
+.icon-8 { top: 50%; right: -10%; }
+
+
+/* === NAVIN RESPONSIVE CODE (Ha Add Kara) === */
+
 /* For Tablets & Mobiles (991px peksha kami screen width) */
 @media (max-width: 991.98px) {
     .about-hub-section {
@@ -424,6 +494,7 @@ body {
         margin-top: 40px; /* Text ani animation madhe jaga sodli */
     }
 }
+
 .center-logo {
     width: 80px;
     height: 80px;
@@ -793,9 +864,27 @@ body {
     max-width: 300px; /* Set max width */
     height: 350px; /* Height will adjust automatically */
 }
-@media (min-width: 992px) {
+/* For Tablets & Mobiles (991px peksha kami screen width) */
+@media (max-width: 991.98px) {
+    .contact-demo-section {
+        margin: 20px 15px; /* Mobile var margin kami keli */
+        padding: 40px 20px; /* Padding pan kami keli */
+    }
+
+    /* Je columns side-by-side hote, tyana space denyasathi */
+    .contact-text-wrapper,
     .character-image-middle {
-        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .character-image-middle img {
+        margin-left: 0; /* सगळ्यात महत्वाचा बदल: Image cha negative margin काढून टाकला */
+        max-width: 250px; /* Image thodi lahan keli */
+        height: auto; /* Height automatically adjust hoil */
+    }
+    
+    .contact-text-wrapper h2 {
+        font-size: 1.8rem; /* Heading thodi lahan keli */
     }
 }
 
